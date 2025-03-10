@@ -9,10 +9,10 @@ export default function Home() {
   const filePath = path.join(process.cwd(), 'app/page.tsx');
   const myself = fs.readFileSync(filePath, 'utf-8');
   const renderResults = () =>{
-    let contents = [];
+    let contents = ["uno", "dos", "tres"];
     return(
-      contents.map((element)=>{
-        return <p>{element}</p>
+      contents.map((element, i)=>{
+        return <p key={i}>{element}</p>
       })
     )
   }
